@@ -1,0 +1,128 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Set full-page layout */
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: #e23744; /* Red theme */
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Video */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+/* Overlay Content */
+header, main, footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Logo */
+.logo {
+    margin-bottom: 20px;
+}
+.logo img {
+    height: 60px;
+}
+
+/* Header Links */
+header ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+header ul li a {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+header ul li a:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+/* Main Content */
+main {
+    margin-top: 40px;
+}
+main h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out;
+}
+main h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+main input {
+    padding: 12px 20px;
+    width: 300px;
+    max-width: 90%;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #e23744;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+main input:focus {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
